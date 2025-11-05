@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte de visite - DG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card-container">
+    <div class="flip-card">
+      <div class="flip-card-inner" id="flipCardInner">
+        <div class="flip-card-front">
+          <img src="sky1.png" alt="Face avant" class="card-image">
+        </div>
+        <div class="flip-card-back">
+          <img src="sky2.png" alt="Face arrière" class="card-image">
+        </div>
+      </div>
+    </div>
+    <h2>M. KABA Aboulaye</h2>
+    <h2>MD</h2>
+	<p class="description">En ma qualité de Directeur Général, j'assure la gestion stratégique, le développement commercial et la gouvernance financière.Ma politique de leadership et ma vision est de développer, dans mon équipe, des capacités permettant à la banque de maintenir une performance durable.
+</p>
+    <button class="btn" onclick="window.location.href='akaba.vcf'">Ajouter
+      <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M16 14c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-8 0c2.21 0 4-1.79 4-4S10.21 6 8 6 4 7.79 4 10s1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h12v-2c0-2.66-5.33-4-8-4zm8-1h2v2h-2v2h-2v-2h-2v-2h2v-2h2v2z"/>
+      </svg>
+    </button>
+  </div>
+<script>
+  const flipCard = document.getElementById('flipCardInner');
+  let flipInterval;
+
+  // Fonction pour démarrer le flip automatique
+  function startFlip() {
+    flipInterval = setInterval(() => {
+      flipCard.classList.toggle('flipped');
+    }, 3000); // toutes les 2 secondes
+  }
+
+  // Fonction pour arrêter le flip automatique
+  function stopFlip() {
+    clearInterval(flipInterval);
+  }
+
+  // Démarre le flip au chargement
+  startFlip();
+
+  // Arrête le flip quand la souris survole la carte (desktop)
+  flipCard.addEventListener('mouseenter', stopFlip);
+
+  // Reprend le flip quand la souris quitte la carte (desktop)
+  flipCard.addEventListener('mouseleave', startFlip);
+
+  // Flip au tap sur mobile
+  flipCard.addEventListener('click', () => {
+    flipCard.classList.toggle('flipped');
+  });
+</script>
+
+</body>
+</html>
