@@ -35,11 +35,10 @@ body {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 15px; /* espace entre icônes, réduit pour mobile */
+  gap: 35px; /* espace plus large entre les icônes */
   margin-top: -54px; /* remonte légèrement le bloc */
   margin-bottom: 20px; /* espace sous les icônes avant le nom */
-  margin-left: 0; /* plus de décalage fixe */
-  flex-wrap: wrap; /* permet aux icônes de passer à la ligne si besoin */
+  margin-left: 220px; /* 👉 décale vers la droite */
 }
 /* Icônes SVG */
 .social-links a svg {
@@ -128,6 +127,7 @@ h2 {
   margin-left: 8px;
   fill: white;
 }
+
 
 
 
