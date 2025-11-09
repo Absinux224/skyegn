@@ -35,7 +35,7 @@ body {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 25px; /* espace entre icônes, réduit pour mobile */
+  gap: 15px; /* espace entre icônes, réduit pour mobile */
   margin-top: -54px; /* remonte légèrement le bloc */
   margin-bottom: 20px; /* espace sous les icônes avant le nom */
   margin-left: 0; /* plus de décalage fixe */
@@ -128,4 +128,5 @@ h2 {
   margin-left: 8px;
   fill: white;
 }
+
 
